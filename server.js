@@ -1,5 +1,5 @@
 require('dotenv').config()
-
+/* 
 const express = require('express');
 const cors = require('cors')
 const http = require('http');
@@ -25,4 +25,17 @@ app.get('*', (req, res) => {
 
 const PORT = process.env.PORT
 server.listen(PORT, () => console.log("Servidor inicialitzat"))
+ */
 
+
+const express = require('express')
+const app = express()
+const PORT = process.env.PORT
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.listen(PORT, () => {
+  console.log(`Example app listening on port ${PORT}`)
+})
